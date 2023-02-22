@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ormoc_app/components/text_field.dart';
+import 'package:ormoc_app/http/auth.dart';
 
 import '../components/button.dart';
 
@@ -71,6 +72,6 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void signIn() {
-    print("signing in");
+    Auth.login(usernameController, passwordController);
   }
 }
